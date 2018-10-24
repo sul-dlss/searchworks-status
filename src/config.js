@@ -54,20 +54,27 @@ export const statusEndpoints = {
 export const statuses = {
   up: {
     icon: '✅',
-    legend: 'No issues',
+    legend: 'Searchworks is up',
     message: 'No issues',
-    global_message: 'All services are operating normally.',
+    global_message: 'Indexes and supporting services are responding normally.',
   },
   maintenance: {
     icon: '🛠',
-    legend: 'Maintenance',
+    legend: 'Scheduled maintenance',
     message: 'Scheduled maintenance',
+    global_message: 'Services may encounter slowness or brief outages.',
   },
   issue: {
     icon: '⚠️',
-    legend: 'Issue',
+    legend: 'SearchWorks may have an issue',
     message: 'Performance is slower than normal',
-    global_message: 'There is an issue with SearchWorks or a related service.',
+    global_message: 'One of its supporting services is affected.',
+  },
+  // Triggered by New Relic monitoring
+  slow: {
+    icon: '⚠️',
+    legend: 'SearchWorks is slow',
+    global_message: 'The operations team has been alerted.',
   },
   pending: {
     icon: '🔄',
@@ -75,13 +82,14 @@ export const statuses = {
   },
   outage: {
     icon: '🚫',
-    legend: 'Outage',
+    legend: 'SearchWorks is partly down',
     message: 'Service is down; operations team is aware',
+    global_message: 'One of its indexes is not responding. We\'re on it.',
   },
   fatal: {
     icon: '🚫',
-    legend: 'Outage',
-    global_message: 'SearchWorks is unavailable. Tech team has been notified.',
+    legend: 'SearchWorks is down',
+    global_message: 'We\'re on it. Check Incidents for updates.',
   },
 };
 
